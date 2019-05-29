@@ -4,54 +4,34 @@
 class Student {
 	private:
 		int age;
-		int standard;
-		string first_name;
-		string last_name;
 	public:
 		Student()
 		{
 			int age = 0;
-			int standard = 0;
-			string first_name;
-			string last_name;
 		}
 		void set_age(int age)
 		{
 			this->age = age;
 		}
-		void set_standard(int standard)
-		{
-			this->standard = standard;
-		}
-		void set_first_name(string first_name)
-		{
-			this->first_name = first_name;
-		}
-		void set_last_name(string last_name)
-		{
-			this->last_name = last_name;
-		}
 		int get_age()
 		{
 			return age;
 		}
-		int get_standard()
-		{
-			return standard;
-		}
-		string get_first_name()
-		{
-			return first_name;
-		}
-		string get_last_name()
-		{
-			return last_name;
-		}
-		string to_string()
-		{
-			stringstream ss;
-			ss << age << "," << first_name << "," << last_name << "," << standard;
-			return ss.str();
-		}
 };
+```
+이런 식으로도 가능하다.
+```
+  Box() : l(0), b(0), h(0) {};
+	Box(int l, int b, int h) : l(l), b(b), h(h) {};
+	Box(Box& B) :l(B.l), b(B.b), h(B.h) {};
+```
+
+# friend
+firend 클래스는 friend로 선언된 다른 클래스의 private 및 protected 멤버에 접근할 수 있다.
+
+# 연산자 오버로딩
+기존의 제공하고 있는 연산자를 재정의하여 사용자 정의 클래스로 사용하는 것
+```
+// << Box 클래스의 << 연산자에 대한 오버로딩 가능하게 함
+ostream& operator << (ostream& out, const Box& B)
 ```
