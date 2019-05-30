@@ -1,7 +1,7 @@
 # 중요
 - cin과 getline
 
-```
+```cpp
 int n;
 cin >> n;
 cin.ignore(); // 남아있는 버퍼를 제거하지 않으면 getline 할 때 공백(\0)을 str 에 넣는다.
@@ -9,7 +9,7 @@ cin.ignore(); // 남아있는 버퍼를 제거하지 않으면 getline 할 때 �
 
 - getline 활용
 
-```
+```cpp
 string str;
 stringstream ss(str);
 getline(cin, query);
