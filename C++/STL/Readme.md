@@ -25,6 +25,12 @@ if(m.find("hello") == m.end()) // key값에 hello가 없으면  m의 마지막 �
 else
   cout << m["hello"] << endl;
 ```
+- find->second
+```
+auto it = mp.find(k);
+key = it->first; // key값
+value = it->second; // second값
+```
 
 # map와 hashmap의 차이
 | map | hashmap |
