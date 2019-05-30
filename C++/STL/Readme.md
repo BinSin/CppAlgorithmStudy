@@ -29,9 +29,12 @@ else
 ```
 auto it = mp.find(k);
 key = it->first; // key값
-value = it->second; // second값
+value = it->second; // value값
 ```
-
+- erase
+```
+map.erase(key); // key값을 갖는 map 삭제
+```
 # map와 hashmap의 차이
 | map | hashmap |
 | :------------------- | :------------------- |
